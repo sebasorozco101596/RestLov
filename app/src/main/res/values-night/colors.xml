@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="grey">#999999</color>
+    <color name="blue">#FF3700B3</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="colorPrimary">#055499</color>
+    <color name="colorPrimaryDark">#0042B3</color>
+    <color name="colorAccent">#0F34BC</color>
+
+    <color name="blue_light">#001EB3</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightGray">#F9F9F9</color>
+    <color name="mediumGray">#D1D1D1</color>
+    <color name="lightMediumGray">#80D1D1D1</color>
+    <color name="darkGray">#4B4B4B</color>
+    <color name="dark">#313C44</color>
+    <color name="darker">#151B20</color>
+    <color name="red">#FF4646</color>
+    <color name="red_dark">#C13232</color>
+    <color name="red_light">#D33737</color>
+    <color name="yellow">#FFC114</color>
+    <color name="green">#00C980</color>
+
+    <!-- Night Mode -->
+    <color name="background_color">@color/dark</color>
+    <color name="linkOverview">#3DEFFF</color>
+    <color name="placeHolderColor">@color/darker</color>
+
+    <!-- Splash colors -->
+    <color name="blackAndWhite">@color/black</color>
+
+
+    // Bottom Navigation View Style
+    <color name="bottomNavBackground">@color/darker</color>
+    <color name="bottomNavItemColor">@color/mediumGray</color>
+    <color name="bottomNavCheckItemColor">@color/colorAccent</color>
+
+    // Views
+    <color name="title_color">@color/mediumGray</color>
+    <color name="statusBarColor">@color/black</color>
+    <color name="divider_color">@color/colorPrimaryDark</color>
+    <color name="actionBarBackgroundColor">@color/colorPrimary</color>
+
+    // Custom CardView Style
+    <color name="strokeColor">@color/mediumGray</color>
+    <color name="cardBackgroundColor">@color/darker</color>
+    <color name="cardBackgroundLightColor">#106200EA</color>
+    <color name="titleColorCardView">@color/mediumGray</color>
+    <color name="descriptionColor">@color/mediumGray</color>
+
+
+
+</resources>

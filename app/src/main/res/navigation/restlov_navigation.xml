@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/restlov_navigation"
+    app:startDestination="@id/restaurantsFragment">
+
+    <fragment
+        android:id="@+id/restaurantsFragment"
+        android:name="com.sebasorozcob.www.restlov.ui.fragments.main.RestaurantsFragment"
+        android:label="Restaurants"
+        tools:layout="@layout/fragment_restaurants">
+        <action
+            android:id="@+id/action_restaurantsFragment_to_restaurantActivity"
+            app:destination="@id/restaurantActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedsFragment"
+        android:name="com.sebasorozcob.www.restlov.ui.fragments.main.feeds.FeedsFragment"
+        android:label="Feed"
+        tools:layout="@layout/fragment_feeds" />
+
+    <fragment
+        android:id="@+id/userProgressFragment"
+        android:name="com.sebasorozcob.www.restlov.ui.fragments.main.ChallengesProgressFragment"
+        android:label="Progress"
+        tools:layout="@layout/fragment_progress_user" />
+    <activity
+        android:id="@+id/restaurantActivity"
+        android:name="com.sebasorozcob.www.restlov.ui.activities.RestaurantActivity"
+        android:label="activity_restaurant"
+        tools:layout="@layout/activity_restaurant">
+        <argument
+            android:name="restaurant"
+            app:argType="com.sebasorozcob.www.restlov.model.RestaurantItem" />
+    </activity>
+
+</navigation>

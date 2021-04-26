@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rowCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/strokeColor"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardBackgroundColor">
+
+            <TextView
+                android:id="@+id/restaurantNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:ellipsize="end"
+                android:fontFamily="@font/courgette"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Mi Dios le pague"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/feedDescriptionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="This is the special menu for today"
+                android:textColor="@color/title_color"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/restaurantNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantNameTextView" />
+
+            <LinearLayout
+                android:id="@+id/photosGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedDescriptionTextView">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cardBackgroundColor"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMaxWidth="10dp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/hearthImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/feedDescriptionTextView"
+                app:layout_constraintTop_toBottomOf="@+id/photosGridView"
+                app:srcCompat="@drawable/ic_hearth" />
+
+            <ImageView
+                android:id="@+id/feedCommentImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/hearthImageView"
+                app:layout_constraintStart_toEndOf="@+id/hearthImageView"
+                app:layout_constraintTop_toTopOf="@+id/hearthImageView"
+                app:srcCompat="@drawable/ic_comment"
+                app:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/numberOfLikesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/courgette"
+                android:text="135 Loves"
+                android:textColor="@color/title_color"
+                app:layout_constraintStart_toStartOf="@+id/hearthImageView"
+                app:layout_constraintTop_toBottomOf="@+id/hearthImageView" />
+
+
+            <EditText
+                android:id="@+id/addCommentEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/search_view_background"
+                android:drawableStart="@drawable/ic_comment"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/courgette"
+                android:hint="Add a comment..."
+                android:maxLines="1"
+                android:padding="3dp"
+                android:textColor="@color/titleColorCardView"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberOfLikesTextView" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardBackgroundColor"
+                android:tint="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="@+id/addCommentEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addCommentEditText"
+                app:srcCompat="@drawable/ic_send" />
+
+            <TextView
+                android:id="@+id/numberOfCommentsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/title_color"
+                tools:text="123 Comments..."
+                app:layout_constraintBottom_toBottomOf="@+id/feedCommentImageView"
+                app:layout_constraintStart_toEndOf="@+id/feedCommentImageView"
+                app:layout_constraintTop_toTopOf="@+id/feedCommentImageView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

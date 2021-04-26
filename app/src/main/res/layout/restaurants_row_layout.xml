@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="restaurant"
+            type="com.sebasorozcob.www.restlov.model.RestaurantItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/restaurantsRowLayout"
+        onRecipeClickListener="@{restaurant}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rowCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/strokeColor"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardBackgroundColor">
+
+                <ImageView
+                    android:id="@+id/restaurantImageView"
+                    loadImageFromUrl="@{restaurant.imageUrl}"
+                    android:layout_width="200dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/restaurantNameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/courgette"
+                    android:maxLines="2"
+                    android:text="@{restaurant.name}"
+                    android:textColor="@color/titleColorCardView"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/restaurantImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/restaurantLocationTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    applyAddress = "@{restaurant.location}"
+                    android:textColor="@color/descriptionColor"
+                    app:layout_constraintEnd_toEndOf="@+id/restaurantNameTextView"
+                    app:layout_constraintStart_toStartOf="@+id/restaurantNameTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/restaurantNameTextView" />
+
+                <ImageView
+                    android:id="@+id/priceLevelOneImageView"
+                    applyMoneyLevelOne="@{restaurant.priceLevel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/restaurantLocationTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/restaurantLocationTextView"
+                    app:srcCompat="@drawable/ic_money"
+                    app:tint="@color/grey"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/priceLevelTwoImageView"
+                    applyMoneyLevelTwo="@{restaurant.priceLevel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/priceLevelOneImageView"
+                    app:layout_constraintStart_toEndOf="@+id/priceLevelOneImageView"
+                    app:layout_constraintTop_toTopOf="@+id/priceLevelOneImageView"
+                    app:srcCompat="@drawable/ic_money"
+                    app:tint="@color/grey"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/priceLevelThreeImageView"
+                    applyMoneyLevelThree="@{restaurant.priceLevel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/priceLevelTwoImageView"
+                    app:layout_constraintStart_toEndOf="@+id/priceLevelTwoImageView"
+                    app:layout_constraintTop_toTopOf="@+id/priceLevelTwoImageView"
+                    app:srcCompat="@drawable/ic_money"
+                    app:tint="@color/grey"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/priceLevelFourImageView"
+                    applyMoneyLevelFour="@{restaurant.priceLevel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/priceLevelThreeImageView"
+                    app:layout_constraintStart_toEndOf="@+id/priceLevelThreeImageView"
+                    app:layout_constraintTop_toTopOf="@+id/priceLevelThreeImageView"
+                    app:srcCompat="@drawable/ic_money"
+                    app:tint="@color/grey"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/priceLevelFiveImageView"
+                    applyMoneyLevelFive="@{restaurant.priceLevel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/priceLevelFourImageView"
+                    app:layout_constraintStart_toEndOf="@+id/priceLevelFourImageView"
+                    app:layout_constraintTop_toTopOf="@+id/priceLevelFourImageView"
+                    app:srcCompat="@drawable/ic_money"
+                    app:tint="@color/grey"
+                    tools:ignore="VectorDrawableCompat" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
