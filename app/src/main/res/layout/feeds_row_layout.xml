@@ -84,7 +84,8 @@
                     app:tabBackground="@drawable/tab_selector"
                     app:tabGravity="center"
                     app:tabIndicatorHeight="0dp"
-                    app:tabMaxWidth="10dp" />
+                    app:tabMaxWidth="10dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
 
             </LinearLayout>
@@ -142,7 +143,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageButton3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/numberOfLikesTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/numberOfLikesTextView"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
@@ -154,7 +156,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/addCommentEditText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/addCommentEditText"
-                app:srcCompat="@drawable/ic_send" />
+                app:srcCompat="@drawable/ic_send"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/numberOfCommentsTextView"

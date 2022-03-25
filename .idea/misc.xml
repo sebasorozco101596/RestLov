@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_restaurant.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/challenges_row_layout.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/dialog_photo_feed.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/dialog_restaurant_overview.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/feed_comments_row_layout.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/feeds_row_layout.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_challenges_restaurant.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_feed_comments.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_imagepager_item.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_progress_user.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_restaurant_menu.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/restaurants_row_layout.xml" value="0.21195652173913043" />
+      </map>
+    </option>
+  </component>
   <component name="EntryPointsManager">
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="com.google.gson.annotations.SerializedName" />
     </list>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

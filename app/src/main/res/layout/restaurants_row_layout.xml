@@ -137,7 +137,8 @@
                     app:layout_constraintTop_toTopOf="@+id/priceLevelFourImageView"
                     app:srcCompat="@drawable/ic_money"
                     app:tint="@color/grey"
-                    tools:ignore="VectorDrawableCompat" />
+                    tools:ignore="VectorDrawableCompat"
+                    android:contentDescription="Level" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

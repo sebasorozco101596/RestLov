@@ -86,9 +86,9 @@ class RestaurantViewModel @Inject constructor(
         locationRequest.fastestInterval = 1000
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
         locationCallBack = object : LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult?) {
-                locationResult ?: return
-                for (location in locationResult.locations) {
+            override fun onLocationResult(p0: LocationResult) {
+                p0 ?: return
+                for (location in p0.locations) {
                     showPosition(fusedLocationClient)
                     fusedLocationClient.removeLocationUpdates(locationCallBack!!)
                 }

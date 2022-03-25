@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:autoLink="phone"
+        android:minHeight="48dp"
         android:text="+1 973-462-0845"
         android:textColorLink="@color/linkOverview"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"

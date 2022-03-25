@@ -58,7 +58,7 @@ class MainViewModel @Inject constructor(
                 }
             } catch (e: Exception) {
                 Log.d("MainViewModel", e.message.toString())
-                restaurantsResponse.value = NetworkResult.Error("Restaurants not found.")
+                restaurantsResponse.value = NetworkResult.Error(e.message)
             }
         } else {
             restaurantsResponse.value = NetworkResult.Error("No Internet Connection.")

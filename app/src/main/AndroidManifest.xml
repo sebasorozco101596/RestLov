@@ -33,7 +33,9 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activities.MainActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
